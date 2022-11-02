@@ -1,0 +1,29 @@
+{
+    "title": "Command + L で スクリーンセーバーを起動する",
+    "rules": [
+        {
+            "description": "Command + L で スクリーンセーバーを起動する",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "l",
+                        "modifiers": {
+                            "mandatory": [
+                                "left_command"
+                            ],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "open /System/Library/CoreServices/ScreenSaverEngine.app"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
